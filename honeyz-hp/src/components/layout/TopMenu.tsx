@@ -1,16 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 
-const customFont = localFont({
-  src: "../../../public/fonts/BMJUA_TTF.woff",
-});
+// const customFont = localFont({
+//   src: "../../../public/fonts/BMJUA.woff",
+// });
 
 const TopMenu = () => {
   const router = useRouter();
+  const pathname = usePathname();
+  const menus = ["about", "news", "tealents", "guideline"];
 
   return (
     <div className="absolute top-0 flex justify-between mt-1.5 w-full">
@@ -24,22 +26,22 @@ const TopMenu = () => {
 
       {/* 메뉴 목록 */}
       <div className="flex item-center gap-32 mr-32">
-        <button
-          className={`text-2xl ${customFont.className}`}
-          onClick={() => router.push("about")}
-        >
-          ABOUT
-        </button>
-        <button
-          className={`text-2xl ${customFont.className}`}
-          onClick={() => router.push("news")}
-        >
-          NEWS
-        </button>
-        <button onClick={() => router.push("talents")}>TALENTS</button>
-        <button onClick={() => router.push("guideline")}>GUIDELINE</button>
+        {menus.map((item, index) => (
+          <button
+            key={index}
+            className={`text-2xl ${
+              pathname.split("/")[1] === item
+                ? "text-pink-500"
+                : "text-black-500"
+            } hover:text-pink-500`}
+            style={{ fontFamily: "BMJUA" }}
+            onClick={() => router.push(item)}
+            children={item.toUpperCase()}
+          />
+        ))}
       </div>
     </div>
   );
 };
+
 export default TopMenu;
