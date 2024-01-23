@@ -24,31 +24,32 @@ const TopMenu = () => {
     <div className="fixed top-1.5 flex justify-between w-full">
       {/* 홈 버튼 */}
       <button
-        className="flex items-center px-3 h-[78px]"
+        className="relative flex items-center px-3 h-[78px]"
         onClick={() => router.push("/")}
       >
         <motion.div
-          className="absolute top-1/2 right-0 w-full h-full rounded-r-lg border-y-2 border-r-2 border-pink-500 bg-white z-[-1] translate-y-[-50%]"
+          className="absolute top-1/2 translate-y-[-50%] right-0 w-full h-full rounded-r-lg border-y-2 border-r-2 border-primary bg-white z-[-1]"
           style={{ opacity: x }}
         />
-        <Image src="/img/logo.png" alt="logo" width={64} height={64} />
+        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <Image src="/img/logo.png" alt="logo" width={64} height={64} />
+        </motion.div>
       </button>
 
       {/* 메뉴 목록 */}
-      <div className="relative flex gap-32 px-32">
+      <div className="relative flex px-24 gap-28">
         <motion.div
-          className="absolute top-1/2 right-0 w-full h-4/5 rounded-l-full border-y-2 border-l-2 border-pink-500 bg-white z-[-1] translate-y-[-50%]"
+          className="absolute top-1/2 right-0 w-full h-4/5 rounded-l-full border-y-2 border-l-2 border-primary bg-white z-[-1] translate-y-[-50%]"
           style={{ opacity: x }}
         />
         {menus.map((item, index) => (
-          <button
+          <motion.button
             key={index}
-            className={`text-2xl ${
-              pathname.split("/")[1] === item
-                ? "text-pink-500"
-                : "text-black-500"
-            } hover:text-pink-500`}
-            style={{ fontFamily: "BMJUA" }}
+            className={`text-xl font-logo ${
+              pathname.split("/")[1] === item ? "text-primary" : "text-black"
+            } hover:text-primary`}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             onClick={() => router.push(item)}
             children={item.toUpperCase()}
           />
