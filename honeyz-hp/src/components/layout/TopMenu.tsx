@@ -28,10 +28,14 @@ const TopMenu = () => {
         onClick={() => router.push("/")}
       >
         <motion.div
-          className="absolute top-1/2 translate-y-[-50%] right-0 w-full h-full rounded-r-lg border-y-2 border-r-2 border-primary bg-white z-[-1]"
+          className="absolute top-1/2 translate-y-[-50%] right-0 w-full h-full rounded-r-lg border-y-2 border-r-2 border-primary bg-white z-20"
           style={{ opacity: x }}
         />
-        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+        <motion.div
+          className="z-30"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
           <Image src="/img/logo.png" alt="logo" width={64} height={64} />
         </motion.div>
       </button>
@@ -39,14 +43,16 @@ const TopMenu = () => {
       {/* 메뉴 목록 */}
       <div className="relative flex px-24 gap-28">
         <motion.div
-          className="absolute top-1/2 right-0 w-full h-4/5 rounded-l-full border-y-2 border-l-2 border-primary bg-white z-[-1] translate-y-[-50%]"
+          className="absolute top-1/2 right-0 w-full h-3/5 rounded-l-full border-y-2 border-l-2 border-primary bg-white z-20 translate-y-[-50%]"
           style={{ opacity: x }}
         />
         {menus.map((item, index) => (
           <motion.button
             key={index}
-            className={`text-xl font-logo ${
-              pathname.split("/")[1] === item ? "text-primary" : "text-black"
+            className={`text-lg font-logo z-30 ${
+              pathname.split("/")[1] === item
+                ? "text-transparent bg-clip-text bg-gradient-to-r from-gradiant0 to-gradiant1"
+                : "text-black"
             } hover:text-primary`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
