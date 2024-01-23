@@ -3,6 +3,7 @@
 import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import MotionButton from "@/components/common/motionButton";
 
 // import localFont from "next/font/local";
 
@@ -23,7 +24,7 @@ const TopMenu = () => {
   return (
     <div className="fixed top-1.5 flex justify-between w-full">
       {/* 홈 버튼 */}
-      <button
+      <div
         className="relative flex items-center px-3 h-[78px]"
         onClick={() => router.push("/")}
       >
@@ -31,14 +32,14 @@ const TopMenu = () => {
           className="absolute top-1/2 translate-y-[-50%] right-0 w-full h-full rounded-r-lg border-y-2 border-r-2 border-primary bg-white z-20"
           style={{ opacity: x }}
         />
-        <motion.div
+        <MotionButton
           className="z-30"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
           <Image src="/img/logo.png" alt="logo" width={64} height={64} />
-        </motion.div>
-      </button>
+        </MotionButton>
+      </div>
 
       {/* 메뉴 목록 */}
       <div className="relative flex px-24 gap-28">
@@ -47,7 +48,7 @@ const TopMenu = () => {
           style={{ opacity: x }}
         />
         {menus.map((item, index) => (
-          <motion.button
+          <MotionButton
             key={index}
             className={`text-lg font-logo z-30 ${
               pathname.split("/")[1] === item
