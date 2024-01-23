@@ -12,9 +12,9 @@ const config: Config = {
         primary: "#ff5e88",
         text: "#2e050c",
         bg: "#ffeaef",
-        gradiant0: "#fb78ae",
-        gradiant1: "#ff807e",
-        gradiant2: "#feb580",
+        gradient0: "#fb78ae",
+        gradient1: "#ff807e",
+        gradient2: "#feb580",
         projecti: "#00c7fe",
       },
       dropShadow: {

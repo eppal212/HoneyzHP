@@ -3,7 +3,7 @@
 import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import MotionButton from "@/components/common/motionButton";
+import MotionButton from "@/components/common/MotionButton";
 
 // import localFont from "next/font/local";
 
@@ -52,7 +52,7 @@ const TopMenu = () => {
             key={index}
             className={`text-lg font-logo z-30 ${
               pathname.split("/")[1] === item
-                ? "text-transparent bg-clip-text bg-gradient-to-r from-gradiant0 to-gradiant1"
+                ? "text-transparent bg-clip-text bg-gradient-to-r from-gradient0 to-gradient1"
                 : "text-black"
             } hover:text-primary`}
             whileHover={{ scale: 1.1 }}

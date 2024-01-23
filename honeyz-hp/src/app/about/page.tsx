@@ -7,7 +7,7 @@ export default function About() {
       <text className="mb-2 text-lg font-starL text-primary">
         허니즈가 궁금해?
       </text>
-      <text className="z-[-1] text-6xl text-transparent font-starB drop-shadow-title bg-clip-text bg-gradient-to-r from-gradiant1 via-gradiant0 to-gradiant1">
+      <text className="z-[-1] text-6xl text-transparent font-starB drop-shadow-title bg-clip-text bg-gradient-to-r from-gradient1 via-gradient0 to-gradient1">
         {`[ ABOUT ]`}
       </text>
 
