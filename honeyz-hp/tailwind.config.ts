@@ -22,7 +22,6 @@ const config: Config = {
       },
     },
     fontFamily: {
-      BMJUA: ["BMJUA"],
       logo: ["LunarModularBold"],
       starB: ["PyeongChangPeaceBold"],
       starL: ["PyeongChangPeaceLight"],
