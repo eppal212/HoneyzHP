@@ -11,3 +11,13 @@
   font-family: "LunarModularBold";
   src: url("/fonts/CCLunarModularBold.woff") format("woff");
 }
+
+@font-face {
+  font-family: "PyeongChangPeaceBold";
+  src: url("/fonts/PyeongChangPeace-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NanumSquareRoundR";
+  src: url("/fonts/NanumSquareRoundR.woff") format("woff");
+}

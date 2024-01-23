@@ -7,10 +7,25 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: { colors: { primary: "#ff5e88", bg: "#ffeaef" } },
+    extend: {
+      colors: {
+        primary: "#ff5e88",
+        text: "#2e050c",
+        bg: "#ffeaef",
+        gradiant0: "#fb78ae",
+        gradiant1: "#ff807e",
+        gradiant2: "#feb580",
+        projecti: "#00c7fe",
+      },
+      dropShadow: {
+        title: "5px 5px #ff5e8833",
+      },
+    },
     fontFamily: {
       BMJUA: ["BMJUA"],
       logo: ["LunarModularBold"],
+      star: ["PyeongChangPeaceBold"],
+      nanum: ["NanumSquareRoundR"],
     },
   },
   plugins: [],
