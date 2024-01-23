@@ -6,3 +6,8 @@
   font-family: "BMJUA";
   src: url("/fonts/BMJUA.woff") format("woff");
 }
+
+@font-face {
+  font-family: "LunarModularBold";
+  src: url("/fonts/CCLunarModularBold.woff") format("woff");
+}
