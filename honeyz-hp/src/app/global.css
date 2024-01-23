@@ -18,6 +18,11 @@
 }
 
 @font-face {
+  font-family: "PyeongChangPeaceLight";
+  src: url("/fonts/PyeongChangPeace-Light.woff") format("woff");
+}
+
+@font-face {
   font-family: "NanumSquareRoundR";
   src: url("/fonts/NanumSquareRoundR.woff") format("woff");
 }
