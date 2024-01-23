@@ -2,7 +2,9 @@
 
 import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
+import { useCurrentLocale, useChangeLocale } from "@/locales/client";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { IconWorld } from "@tabler/icons-react";
 import MotionButton from "@/components/common/MotionButton";
 import Logo from "/public/img/logo.png";
 
@@ -15,12 +17,14 @@ import Logo from "/public/img/logo.png";
 const TopMenu = () => {
   const router = useRouter();
   const pathname = usePathname();
+  const changeLocale = useChangeLocale();
+  const currentLocale = useCurrentLocale();
+  const menus = ["about", "news", "tealents", "music", "videos", "guideline"];
+
   const { scrollY } = useScroll();
-  const x = useTransform(() =>
+  const bgOpacity = useTransform(() =>
     scrollY.get() > 78 ? 0.8 : (scrollY.get() / 78) * 0.8
   );
-
-  const menus = ["about", "news", "tealents", "guideline"];
 
   return (
     <div className="fixed top-1.5 flex justify-between w-full">
@@ -31,7 +35,7 @@ const TopMenu = () => {
       >
         <motion.div
           className="absolute top-1/2 translate-y-[-50%] right-0 w-full h-full rounded-r-lg border-y-2 border-r-2 border-primary bg-white z-20"
-          style={{ opacity: x }}
+          style={{ opacity: bgOpacity }}
         />
         <MotionButton
           className="z-30"
@@ -43,10 +47,10 @@ const TopMenu = () => {
       </div>
 
       {/* 메뉴 목록 */}
-      <div className="relative flex px-24 gap-28">
+      <div className="relative flex gap-20 pl-24 pr-8">
         <motion.div
           className="absolute top-1/2 right-0 w-full h-3/5 rounded-l-full border-y-2 border-l-2 border-primary bg-white z-20 translate-y-[-50%]"
-          style={{ opacity: x }}
+          style={{ opacity: bgOpacity }}
         />
         {menus.map((item, index) => (
           <MotionButton
@@ -62,6 +66,19 @@ const TopMenu = () => {
             children={item.toUpperCase()}
           />
         ))}
+        <MotionButton
+          className={`text-lg font-logo z-30 hover:text-primary ml-[-30px]`}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => changeLocale(currentLocale === "ko" ? "en" : "ko")}
+        >
+          <div className="flex items-center">
+            <IconWorld />
+            <text className="mt-[1px] text-sm font-bold font-nanum">
+              {currentLocale === "ko" ? "KR" : "EN"}
+            </text>
+          </div>
+        </MotionButton>
       </div>
     </div>
   );
