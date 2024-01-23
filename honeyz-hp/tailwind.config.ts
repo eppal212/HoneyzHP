@@ -7,7 +7,7 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: { colors: { primary: "#ff5e88" } },
+    extend: { colors: { primary: "#ff5e88", bg: "#ffeaef" } },
     fontFamily: {
       BMJUA: ["BMJUA"],
       logo: ["LunarModularBold"],

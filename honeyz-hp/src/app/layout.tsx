@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
+import Image from "next/image";
 import "@/app/global.css";
 
 import TopMenu from "@/components/layout/TopMenu";
@@ -19,9 +20,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={inter.className}>
+      <body className={(inter.className, "bg-bg")}>
         <TopMenu />
         {children}
+        <Image
+          className="fixed bottom-0 right-0 opacity-5 z-[-1]"
+          src="/img/bg-logo.png"
+          alt="bg-logo"
+          width={500}
+          height={500}
+        />
         <Footer />
       </body>
     </html>
