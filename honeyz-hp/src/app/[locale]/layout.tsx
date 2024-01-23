@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import Image from "next/image";
-import "@/app/global.css";
+import "@/app/[locale]/global.css";
 
 import TopMenu from "@/components/layout/TopMenu";
 import Footer from "@/components/layout/Footer";
+
+import BgLogo from "/public/img/bg-logo.png";
 
 const inter = Noto_Sans_KR({ subsets: ["latin"] });
 
@@ -25,10 +27,9 @@ export default function RootLayout({
         {children}
         <Image
           className="fixed bottom-0 right-0 opacity-5 z-[-1]"
-          src="/img/bg-logo.png"
+          src={BgLogo}
           alt="bg-logo"
           width={500}
-          height={500}
         />
         <Footer />
       </body>

@@ -8,6 +8,7 @@ import {
   IconSquareLetterN,
 } from "@tabler/icons-react";
 import MotionButton from "@/components/common/MotionButton";
+import Projecti from "/public/img/projecti-black.png";
 
 const Footer = () => {
   return (
@@ -40,12 +41,7 @@ const Footer = () => {
       {/* 회사 로고 */}
       <div className="flex items-center gap-3">
         <text className="text-xl font-bold">Operating by</text>
-        <Image
-          src="/img/projecti-black.png"
-          alt="projecti"
-          width={50}
-          height={50}
-        />
+        <Image src={Projecti} alt="projecti" width={50} />
       </div>
     </div>
   );

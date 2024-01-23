@@ -4,6 +4,7 @@ import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import MotionButton from "@/components/common/MotionButton";
+import Logo from "/public/img/logo.png";
 
 // import localFont from "next/font/local";
 
@@ -37,7 +38,7 @@ const TopMenu = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <Image src="/img/logo.png" alt="logo" width={64} height={64} />
+          <Image src={Logo} alt="logo" width={64} />
         </MotionButton>
       </div>
 
@@ -51,7 +52,7 @@ const TopMenu = () => {
           <MotionButton
             key={index}
             className={`text-lg font-logo z-30 ${
-              pathname.split("/")[1] === item
+              pathname.split("/")[2] === item
                 ? "text-transparent bg-clip-text bg-gradient-to-r from-gradient0 to-gradient1"
                 : "text-black"
             } hover:text-primary`}
