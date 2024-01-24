@@ -26,7 +26,7 @@ const PageTitle = () => {
 
   return (
     <motion.div
-      className="flex flex-col items-center pt-36 justify-center"
+      className="flex flex-col items-center pt-36 justify-center z-[-1]"
       initial={{ opacity: 0, transform: "translateY(-10px)" }}
       whileInView={{
         opacity: 1,
@@ -43,7 +43,7 @@ const PageTitle = () => {
       <span className="mb-2 text-lg font-starL text-primary">
         {t("subtitle")}
       </span>
-      <span className="z-[-1] text-6xl text-transparent font-starB drop-shadow-title bg-clip-text bg-gradient-to-r from-gradient1 via-gradient0 to-gradient1">
+      <span className=" text-6xl text-transparent font-starB drop-shadow-title bg-clip-text bg-gradient-to-r from-gradient1 via-gradient0 to-gradient1">
         {`[ ${pageName.toUpperCase()} ]`}
       </span>
     </motion.div>
