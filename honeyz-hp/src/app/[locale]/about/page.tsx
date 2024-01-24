@@ -1,18 +1,19 @@
 import Image from "next/image";
-import { getScopedI18n } from "@/locales/server";
+import { getCurrentLocale, getScopedI18n } from "@/locales/server";
+import { LocaleProvider } from "@/app/[locale]/LocaleProvider";
+import PageTitle from "@/components/layout/PageTitle";
 import AboutMain from "/public/img/about-main.jpg";
 
 export default async function About() {
+  const locale = getCurrentLocale();
   const t = await getScopedI18n("page.about");
+
   return (
-    <div className="flex flex-col items-center pt-36 justify-cente">
+    <div className="flex flex-col items-center justify-cente">
       {/* 타이틀 */}
-      <text className="mb-2 text-lg font-starL text-primary">
-        {t("subtitle")}
-      </text>
-      <text className="z-[-1] text-6xl text-transparent font-starB drop-shadow-title bg-clip-text bg-gradient-to-r from-gradient1 via-gradient0 to-gradient1">
-        {`[ ABOUT ]`}
-      </text>
+      <LocaleProvider locale={locale}>
+        <PageTitle />
+      </LocaleProvider>
 
       {/* 소개 */}
       <div className="flex gap-10 mt-16">
