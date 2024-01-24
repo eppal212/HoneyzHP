@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import Image from "next/image";
-import "@/app/[locale]/global.css";
+import "@/styles/global.css";
 
 import TopMenu from "@/components/layout/TopMenu";
 import Footer from "@/components/layout/Footer";
