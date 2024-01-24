@@ -74,9 +74,9 @@ const TopMenu = () => {
         >
           <div className="flex items-center">
             <IconWorld />
-            <text className="mt-[1px] text-sm font-bold font-nanum">
+            <span className="mt-[1px] text-sm font-bold font-nanum">
               {currentLocale === "ko" ? "KR" : "EN"}
-            </text>
+            </span>
           </div>
         </MotionButton>
       </div>

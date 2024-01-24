@@ -32,10 +32,10 @@ export default async function About() {
           <source src="/video/home_video.webm" type="video/webm" />
         </video>
       </div>
-      <text className="mt-16 text-xl font-bold leading-[2.5] text-center whitespace-pre-wrap font-nanum text-text">
-        <text className="text-primary">{t("honeyz")}</text>
+      <span className="mt-16 text-xl font-bold leading-[2.5] text-center whitespace-pre-wrap font-nanum text-text">
+        <span className="text-primary">{t("honeyz")}</span>
         {t("description")}
-      </text>
+      </span>
     </div>
   );
 }

@@ -40,12 +40,12 @@ const PageTitle = () => {
       }}
       viewport={{ once: true }}
     >
-      <text className="mb-2 text-lg font-starL text-primary">
+      <span className="mb-2 text-lg font-starL text-primary">
         {t("subtitle")}
-      </text>
-      <text className="z-[-1] text-6xl text-transparent font-starB drop-shadow-title bg-clip-text bg-gradient-to-r from-gradient1 via-gradient0 to-gradient1">
+      </span>
+      <span className="z-[-1] text-6xl text-transparent font-starB drop-shadow-title bg-clip-text bg-gradient-to-r from-gradient1 via-gradient0 to-gradient1">
         {`[ ${pageName.toUpperCase()} ]`}
-      </text>
+      </span>
     </motion.div>
   );
 };
