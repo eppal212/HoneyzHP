@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import Image from "next/image";
+import { getCurrentLocale } from "@/locales/server";
+import { LocaleProvider } from "@/app/[locale]/LocaleProvider";
 import "@/styles/global.css";
 
 import TopMenu from "@/components/layout/TopMenu";
@@ -20,18 +22,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = getCurrentLocale();
+
   return (
     <html lang="ko">
       <body className={(inter.className, "bg-bg")}>
         <TopMenu />
         {children}
         <Image
-          className="fixed bottom-0 right-0 opacity-5 z-[-1]"
+          className="fixed bottom-0 right-0 opacity-5 z-[-1] pointer-events-none"
           src={BgLogo}
           alt="bg-logo"
           width={500}
         />
-        <Footer />
+        <LocaleProvider locale={locale}>
+          <Footer />
+        </LocaleProvider>
       </body>
     </html>
   );

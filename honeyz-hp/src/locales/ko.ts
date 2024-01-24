@@ -8,4 +8,7 @@ export default {
   "page.talents.subtitle": "허니즈가 궁금해?",
 
   "page.guideline.subtitle": "허니즈가 궁금해?",
+
+  "component.footer.email-ok": `메일 주소를 복사했습니다.\n메일로 문의해 주세요!`,
+  "component.footer.email-fail": `contact@projecti.kr로 문의해 주세요!`,
 } as const;
