@@ -19,7 +19,7 @@ const TopMenu = () => {
   const pathname = usePathname();
   const changeLocale = useChangeLocale();
   const currentLocale = useCurrentLocale();
-  const menus = ["about", "news", "tealents", "music", "videos", "guideline"];
+  const menus = ["about", "news", "talents", "guideline"];
 
   const { scrollY } = useScroll();
   const bgOpacity = useTransform(() =>
