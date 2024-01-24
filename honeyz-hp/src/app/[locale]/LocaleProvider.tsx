@@ -6,7 +6,7 @@ type ProviderProps = {
   children: ReactNode;
 };
 
-export function Provider({ locale, children }: ProviderProps) {
+export function LocaleProvider({ locale, children }: ProviderProps) {
   return (
     <I18nProviderClient locale={locale} fallback={<p>Loading...</p>}>
       {children}
