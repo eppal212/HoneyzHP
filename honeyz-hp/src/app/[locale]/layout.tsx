@@ -8,6 +8,7 @@ import "@/styles/global.css";
 import TopMenu from "@/components/layout/TopMenu";
 import Footer from "@/components/layout/Footer";
 
+import BgTop from "/public/img/bg-top.png";
 import BgLogo from "/public/img/bg-logo.png";
 
 const inter = Noto_Sans_KR({ subsets: ["latin"] });
@@ -26,8 +27,14 @@ export default function RootLayout({
 
   return (
     <html lang="ko">
-      <body className={(inter.className, "bg-bg")}>
+      <body className={(inter.className, "relative bg-bg")}>
         <TopMenu />
+        <Image
+          className="absolute top-0 left-0 opacity-5 z-[-1] pointer-events-none"
+          src={BgTop}
+          alt="bg-logo"
+          width={500}
+        />
         {children}
         <Image
           className="fixed bottom-0 right-0 opacity-5 z-[-1] pointer-events-none"
