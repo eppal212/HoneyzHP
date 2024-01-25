@@ -43,7 +43,7 @@ const PageTitle = () => {
       <span className="mb-2 text-lg font-starL text-primary">
         {t("subtitle")}
       </span>
-      <span className=" text-6xl text-transparent font-starB drop-shadow-title bg-clip-text bg-gradient-to-r from-gradient1 via-gradient0 to-gradient1">
+      <span className=" text-6xl font-starB drop-shadow-title gradient-text-primary">
         {`[ ${pageName.toUpperCase()} ]`}
       </span>
     </motion.div>

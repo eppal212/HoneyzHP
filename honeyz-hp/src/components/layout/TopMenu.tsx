@@ -57,7 +57,7 @@ const TopMenu = () => {
             key={index}
             className={`text-lg font-logo z-30 ${
               pathname.split("/")[2] === item
-                ? "text-transparent bg-clip-text bg-gradient-to-r from-gradient0 to-gradient1"
+                ? "gradient-text-primary"
                 : "text-black"
             } hover:text-primary`}
             whileHover={{ scale: 1.1 }}
