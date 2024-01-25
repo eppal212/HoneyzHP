@@ -63,8 +63,9 @@ const TopMenu = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => router.push(item)}
-            children={item.toUpperCase()}
-          />
+          >
+            {item.toUpperCase()}
+          </MotionButton>
         ))}
         <MotionButton
           className={`text-lg font-logo z-30 hover:text-primary -ml-6`}

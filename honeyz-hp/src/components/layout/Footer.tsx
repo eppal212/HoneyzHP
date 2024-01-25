@@ -22,27 +22,29 @@ const Footer = () => {
       <MotionButton
         className="absolute -top-[22px] right-20 rounded-full bg-bg"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        children={
-          <IconCircleArrowUp className="text-gradient1" size={buttonSize} />
-        }
-      />
+      >
+        <IconCircleArrowUp className="text-gradient1" size={buttonSize} />
+      </MotionButton>
 
       {/* 링크 아이템 */}
       <div className="relative flex items-center gap-10">
         <MotionButton
           onClick={() => window.open("https://twitter.com/projecti_kr")}
-          children={<IconBrandX size={buttonSize} />}
-        />
+        >
+          <IconBrandX size={buttonSize} />
+        </MotionButton>
         <span>|</span>
         <MotionButton
           onClick={() => window.open("https://www.youtube.com/@Projecti_kr")}
-          children={<IconBrandYoutubeFilled size={buttonSize} />}
-        />
+        >
+          <IconBrandYoutubeFilled size={buttonSize} />
+        </MotionButton>
         <span>|</span>
         <MotionButton
           onClick={() => window.open("https://cafe.naver.com/projectiofficial")}
-          children={<IconSquareLetterN size={buttonSize} />}
-        />
+        >
+          <IconSquareLetterN size={buttonSize} />
+        </MotionButton>
         <span>|</span>
         <MotionButton
           onClick={() => {
@@ -53,8 +55,9 @@ const Footer = () => {
               alert(t("email-fail"));
             }
           }}
-          children={<IconMail size={buttonSize} />}
-        />
+        >
+          <IconMail size={buttonSize} />
+        </MotionButton>
       </div>
 
       {/* 회사 로고 */}

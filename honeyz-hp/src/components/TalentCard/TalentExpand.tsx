@@ -74,26 +74,25 @@ const TalentExpand = ({ id, onClose }: props) => {
           <div className="flex flex-col">
             <span
               className={`text-7xl font-starB drop-shadow-title gradient-text-primary`}
-              children={data?.name}
-            />
+            >
+              {data?.name}
+            </span>
             <span
               className={`text-4xl font-starB drop-shadow-title gradient-text-primary`}
-              children={data?.enName}
-            />
+            >
+              {data?.enName}
+            </span>
           </div>
           <div className="flex gap-5">
-            <MotionButton
-              onClick={() => window.open(data?.xLink)}
-              children={<IconBrandX size={40} />}
-            />
-            <MotionButton
-              onClick={() => window.open(data?.youtubeLink)}
-              children={<IconBrandYoutubeFilled size={40} />}
-            />
-            <MotionButton
-              onClick={() => window.open(data?.twitchLink)}
-              children={<IconBrandTwitch size={40} />}
-            />
+            <MotionButton onClick={() => window.open(data?.xLink)}>
+              <IconBrandX size={40} />
+            </MotionButton>
+            <MotionButton onClick={() => window.open(data?.youtubeLink)}>
+              <IconBrandYoutubeFilled size={40} />
+            </MotionButton>
+            <MotionButton onClick={() => window.open(data?.twitchLink)}>
+              <IconBrandTwitch size={40} />
+            </MotionButton>
           </div>
         </div>
 
