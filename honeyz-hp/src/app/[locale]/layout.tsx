@@ -30,14 +30,14 @@ export default function RootLayout({
       <body className={(inter.className, "relative bg-bg")}>
         <TopMenu />
         <Image
-          className="absolute top-0 left-0 opacity-5 z-[-1] pointer-events-none"
+          className="absolute top-0 left-0 opacity-5 -z-10 pointer-events-none"
           src={BgTop}
           alt="bg-logo"
           width={500}
         />
         {children}
         <Image
-          className="fixed bottom-0 right-0 opacity-5 z-[-1] pointer-events-none"
+          className="fixed bottom-0 right-0 opacity-5 -z-10 pointer-events-none"
           src={BgLogo}
           alt="bg-logo"
           width={500}

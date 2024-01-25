@@ -26,7 +26,7 @@ const PageTitle = () => {
 
   return (
     <motion.div
-      className="flex flex-col items-center pt-36 justify-center z-[-1]"
+      className="flex flex-col items-center pt-36 justify-center -z-10"
       initial={{ opacity: 0, transform: "translateY(-10px)" }}
       whileInView={{
         opacity: 1,

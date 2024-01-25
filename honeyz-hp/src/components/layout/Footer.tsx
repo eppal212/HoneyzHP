@@ -13,14 +13,14 @@ import MotionButton from "@/components/common/MotionButton";
 import Projecti from "/public/img/projecti-black.png";
 
 const Footer = () => {
-  const buttonSize = 45;
+  const buttonSize = 44;
   const t = useScopedI18n("component.footer");
 
   return (
     <div className="relative flex flex-col items-center justify-center w-full gap-5 py-10 mt-32 bg-gradient-to-r from-gradient1 via-gradient0 to-gradient1">
       {/* 맨 위로 버튼 */}
       <MotionButton
-        className="absolute top-[-25px] right-20 rounded-full bg-bg"
+        className="absolute -top-[22px] right-20 rounded-full bg-bg"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         children={
           <IconCircleArrowUp className="text-gradient1" size={buttonSize} />
