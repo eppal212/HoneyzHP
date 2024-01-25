@@ -2,7 +2,7 @@ import Image from "next/image";
 import { getCurrentLocale, getScopedI18n } from "@/locales/server";
 import { LocaleProvider } from "@/app/[locale]/LocaleProvider";
 import PageTitle from "@/components/layout/PageTitle";
-import TalentList from "@/components/TalentCard/TalentList";
+import TalentGrid from "@/components/TalentCard/TalentGrid";
 
 export default async function Talents() {
   const locale = getCurrentLocale();
@@ -16,7 +16,7 @@ export default async function Talents() {
       </LocaleProvider>
 
       <div className="flex gap-10 mt-24">
-        <TalentList />
+        <TalentGrid />
       </div>
     </div>
   );
