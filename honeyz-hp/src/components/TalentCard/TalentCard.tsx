@@ -1,9 +1,7 @@
-"use client";
-
 import { memo, useState } from "react";
 import { motion } from "framer-motion";
-import ParallaxText from "../ParallaxText";
-import MotionAppearView from "../layout/MotionAppearView";
+import ParallaxText from "@/components/ParallaxText";
+import MotionAppearView from "@/components/layout/MotionAppearView";
 
 export type Talent = {
   id: string;
@@ -22,7 +20,7 @@ const TalentCard = ({ data, setSelectId }: props) => {
   const [isHover, setHover] = useState(false);
 
   return (
-    <MotionAppearView type="up" layoutId={data.id}>
+    <MotionAppearView type="up">
       <motion.button
         className="relative"
         onHoverStart={() => setHover(true)}
@@ -39,6 +37,7 @@ const TalentCard = ({ data, setSelectId }: props) => {
           }.png`}
           alt="profile"
         />
+
         {/* 이름 */}
         <div className="absolute bottom-4 flex flex-col items-center w-full">
           <span
@@ -54,8 +53,9 @@ const TalentCard = ({ data, setSelectId }: props) => {
             {data.enName}
           </span>
         </div>
+
         {/* 이동하는 배경 글자 */}
-        <div className="absolute top-0 flex flex-col justify-center gap-4 w-full h-full z-[-1]">
+        <div className="absolute top-0 flex flex-col justify-center gap-4 w-full h-full -z-10">
           {[3, -3, 3, -3, 3].map((item, index) => (
             <ParallaxText
               key={index}
