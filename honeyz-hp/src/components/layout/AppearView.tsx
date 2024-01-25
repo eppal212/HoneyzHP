@@ -10,8 +10,11 @@ interface props {
 
 // 서버 컴포넌트에서 애니메이션을 쓰기 위해 만든 뷰
 const AppearView = ({ className, type, children }: props) => {
-  const style = twMerge(className, `appear-animation-${type}`);
-  return <div className={style}>{children}</div>;
+  return (
+    <div className={twMerge(className, `appear-animation-${type}`)}>
+      {children}
+    </div>
+  );
 };
 
 export default memo(AppearView);

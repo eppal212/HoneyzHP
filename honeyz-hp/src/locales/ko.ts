@@ -5,7 +5,7 @@ export default {
 
   "page.news.subtitle": "허니즈가 궁금해?",
 
-  "page.talents.subtitle": "허니즈가 궁금해?",
+  "page.talents.subtitle": "개성만점 멤버들!",
 
   "page.guideline.subtitle": "허니즈가 궁금해?",
 
