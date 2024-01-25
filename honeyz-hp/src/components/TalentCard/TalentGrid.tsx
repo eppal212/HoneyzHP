@@ -34,10 +34,8 @@ const TalentGrid = () => {
               <motion.img
                 className={`w-80`}
                 layoutId={data.id}
-                src={`/img/${
-                  data.profileImages[
-                    hoverId === data.id ? Math.ceil(Math.random() * 2) : 0
-                  ]
+                src={`/img/profile-${data.id}-${
+                  hoverId === data.id ? Math.ceil(Math.random() * 2) : 0
                 }.png`}
                 alt="profile"
               />
