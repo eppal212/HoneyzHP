@@ -19,6 +19,12 @@ const config: Config = {
       },
       dropShadow: {
         title: "5px 5px #ff5e8833",
+        talentName: [
+          "-1px 0 2px white",
+          "0 1px 2px white",
+          "1px 0 2px white",
+          "0 -1px 2px white",
+        ],
       },
     },
     fontFamily: {
