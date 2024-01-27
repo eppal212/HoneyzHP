@@ -47,7 +47,7 @@ const TopMenu = () => {
       </div>
 
       {/* 메뉴 목록 */}
-      <div className="relative flex gap-20 pl-24 pr-8">
+      <nav className="relative flex gap-20 pl-24 pr-8">
         <motion.div
           className="absolute top-1/2 right-0 w-full h-3/5 rounded-l-full border-y-2 border-l-2 border-primary bg-white -translate-y-1/2"
           style={{ opacity: bgOpacity }}
@@ -80,7 +80,7 @@ const TopMenu = () => {
             </span>
           </div>
         </MotionButton>
-      </div>
+      </nav>
     </div>
   );
 };
