@@ -5,7 +5,7 @@ import { LocaleProvider } from "@/app/[locale]/LocaleProvider";
 import { useCurrentLocale } from "@/locales/client";
 import { motion } from "framer-motion";
 import { TalentData } from "@/models/TalentData";
-import TalentExpand from "@/components/TalentCard/TalentExpand";
+import TalentExpand from "@/components/talent-card/TalentExpand";
 import ParallaxText from "@/components/ParallaxText";
 import MotionAppearView from "@/components/layout/MotionAppearView";
 
@@ -17,7 +17,7 @@ const TalentGrid = () => {
     <>
       {/* Card를 컴포넌트로 분리하면 layoutId가 동작하지 않아서 List에서 구현 */}
       <div className="grid grid-cols-2 md:grid-cols-3 w-full gap-20">
-        {TalentData.map((data) => (
+        {TalentData.map((data, index) => (
           <MotionAppearView key={data.id} type="up">
             <motion.button
               className={`relative rounded-2xl border-2`}

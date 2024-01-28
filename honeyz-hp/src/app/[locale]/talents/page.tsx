@@ -2,7 +2,7 @@ import Image from "next/image";
 import { getCurrentLocale, getScopedI18n } from "@/locales/server";
 import { LocaleProvider } from "@/app/[locale]/LocaleProvider";
 import PageTitle from "@/components/layout/PageTitle";
-import TalentGrid from "@/components/TalentCard/TalentGrid";
+import TalentGrid from "@/components/talent-card/TalentGrid";
 
 export default async function Talents() {
   const locale = getCurrentLocale();

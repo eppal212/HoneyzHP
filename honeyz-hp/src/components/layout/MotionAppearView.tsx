@@ -4,12 +4,19 @@ import { motion, MotionProps } from "framer-motion";
 interface props extends MotionProps {
   className?: string;
   type: "up" | "down" | "left" | "right";
+  delay?: number;
   children: React.ReactNode;
   onClick?: () => void;
 }
 
 // framer-motion을 이용한 AppearView
-const MotionAppearView = ({ className, type, children, onClick }: props) => {
+const MotionAppearView = ({
+  className,
+  type,
+  delay = 0.6,
+  children,
+  onClick,
+}: props) => {
   const getInitTransform = () => {
     switch (type) {
       case "up":
@@ -34,7 +41,7 @@ const MotionAppearView = ({ className, type, children, onClick }: props) => {
           type: "tween",
           duration: 0.9,
           ease: [0.17, 0.55, 0.55, 1],
-          delay: 0.3,
+          delay: delay,
         },
       }}
       viewport={{ once: true }}
