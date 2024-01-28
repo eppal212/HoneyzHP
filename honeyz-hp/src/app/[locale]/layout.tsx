@@ -39,9 +39,9 @@ export default function RootLayout({
         {/* 본문 */}
         <div className="h-auto min-h-screen mb-32">{children}</div>
         {/* 워터마크 */}
-        <div className="sticky bottom-0">
+        <div className="sticky bottom-0 -z-10 ">
           <Image
-            className="absolute bottom-10 right-10 opacity-5 -z-10 pointer-events-none"
+            className="absolute bottom-10 right-10 opacity-5 pointer-events-none"
             src={BgLogo}
             alt="bg-logo"
             width={500}

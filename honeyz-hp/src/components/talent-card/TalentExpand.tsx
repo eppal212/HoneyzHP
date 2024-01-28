@@ -97,13 +97,13 @@ const TalentExpand = ({ id, onClose }: props) => {
         </div>
 
         {/* 글씨들 */}
-        <p className="text-xl whitespace-pre-wrap font-bold font-nanum text-text mt-8">
+        <p className="text-xl whitespace-pre-wrap font-bold font-nanumR text-text mt-8">
           {t("detail")}
         </p>
-        <p className="text-xl whitespace-pre-wrap font-bold font-nanum text-text mt-8">
+        <p className="text-xl whitespace-pre-wrap font-bold font-nanumR text-text mt-8">
           {t("hello")}
         </p>
-        <p className="text-xl whitespace-pre-wrap font-bold font-nanum text-text mt-12">
+        <p className="text-xl whitespace-pre-wrap font-bold font-nanumR text-text mt-12">
           {t("introduce")}
         </p>
 

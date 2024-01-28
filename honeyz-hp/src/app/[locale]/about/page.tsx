@@ -41,7 +41,7 @@ export default async function About() {
       </div>
       {/* 문구 */}
       <AppearView className="mt-16" type="up">
-        <p className="text-xl font-bold leading-[2.5] text-center whitespace-pre-wrap font-nanum text-text">
+        <p className="text-xl font-bold leading-[2.5] text-center whitespace-pre-wrap font-nanumR text-text">
           <span className="text-primary">{t("honeyz")}</span>
           {t("description")}
         </p>

@@ -75,7 +75,7 @@ const TopMenu = () => {
         >
           <div className="flex items-center">
             <IconWorld />
-            <span className="mt-[1px] text-sm font-bold font-nanum">
+            <span className="mt-[1px] text-sm font-bold font-nanumR">
               {currentLocale === "ko" ? "KR" : "EN"}
             </span>
           </div>

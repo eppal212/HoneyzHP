@@ -1,8 +1,6 @@
-import Image from "next/image";
 import { getCurrentLocale, getScopedI18n } from "@/locales/server";
 import { LocaleProvider } from "@/app/[locale]/LocaleProvider";
 import PageTitle from "@/components/layout/PageTitle";
-import AboutMain from "/public/img/about-main.jpg";
 import AppearView from "@/components/layout/AppearView";
 
 const Paragraph = async ({ index }: { index: number }) => {
@@ -20,10 +18,10 @@ const Paragraph = async ({ index }: { index: number }) => {
     }
   };
   return (
-    <AppearView className="flex flex-col mt-16 gap-3" type="up">
-      <h1 className="text-3xl font-nanum font-bold text-text">
+    <AppearView className="flex flex-col gap-3" type="up">
+      <h2 className="text-3xl font-nanum font-bold text-text">
         {getText()?.title}
-      </h1>
+      </h2>
       <p className="text-xl leading-[1.5] whitespace-pre-wrap font-nanum text-text">
         {getText()?.desc}
       </p>
@@ -33,6 +31,7 @@ const Paragraph = async ({ index }: { index: number }) => {
 
 export default async function About() {
   const locale = getCurrentLocale();
+  const t = await getScopedI18n("page.guideline.contents");
   return (
     <div className="flex flex-col items-center justify-cente">
       {/* 타이틀 */}
@@ -40,12 +39,26 @@ export default async function About() {
         <PageTitle />
       </LocaleProvider>
 
+      <AppearView className="flex flex-col mt-20 gap-5" type="up">
+        <h1 className="text-4xl font-nanum font-bold text-text text-center">
+          {t("header.title")}
+        </h1>
+        <p className="text-xl font-nanum text-text text-center">
+          {t("header.desc")}
+        </p>
+      </AppearView>
+
       {/* 내용 */}
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-20 mt-16">
         {[...Array(4)].map((_, index) => (
           <Paragraph key={index} index={index} />
         ))}
       </div>
+      <AppearView type="up">
+        <p className="text-xl leading-[1.5] whitespace-pre-wrap font-nanum text-text text-center mt-24">
+          {t("footer")}
+        </p>
+      </AppearView>
     </div>
   );
 }
