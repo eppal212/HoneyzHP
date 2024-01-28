@@ -35,7 +35,7 @@ export default function RootLayout({
           alt="bg-logo"
           width={500}
         />
-        {children}
+        <div className="h-auto min-h-screen">{children}</div>
         <Image
           className="fixed bottom-0 right-0 opacity-5 -z-10 pointer-events-none"
           src={BgLogo}

@@ -17,7 +17,7 @@ const Footer = () => {
   const t = useScopedI18n("component.footer");
 
   return (
-    <div className="relative flex flex-col items-center justify-center w-full gap-5 py-10 mt-32 bg-gradient-to-r from-gradient1 via-gradient0 to-gradient1">
+    <footer className="relative flex flex-col items-center justify-center w-full h-48 mt-32 gap-5 bg-gradient-to-r from-gradient1 via-gradient0 to-gradient1">
       {/* 맨 위로 버튼 */}
       <MotionButton
         className="absolute -top-[22px] right-20 rounded-full bg-bg"
@@ -65,7 +65,7 @@ const Footer = () => {
         <span className="text-lg font-bold">Operating by</span>
         <Image src={Projecti} alt="projecti" width={buttonSize} />
       </div>
-    </div>
+    </footer>
   );
 };
 
