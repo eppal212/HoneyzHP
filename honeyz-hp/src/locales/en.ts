@@ -3,8 +3,6 @@ export default {
   "page.about.honeyz": "Honeyz",
   "page.about.description": ` is a group of six virtual YouTubers belonging to Project[i].\nEach member has unique charms and talents,\nthey gathered to communicate with their fans and share fun moments through various contents.\nHoneyz goal is to laugh together, grow together, and have a happy time. (Maybe)`,
 
-  "page.news.subtitle": "What is Honeyz?",
-
   "page.talents.subtitle": "All of members!",
   "page.talents.honey-churros.detail":
     "Height : 168cm Birthday : Dec.2. Age : 2024",

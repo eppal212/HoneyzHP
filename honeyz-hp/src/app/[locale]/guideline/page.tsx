@@ -33,7 +33,7 @@ export default async function About() {
   const locale = getCurrentLocale();
   const t = await getScopedI18n("page.guideline.contents");
   return (
-    <div className="flex flex-col items-center justify-cente">
+    <div className="flex flex-col items-center justify-center">
       {/* 타이틀 */}
       <LocaleProvider locale={locale}>
         <PageTitle />

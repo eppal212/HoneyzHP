@@ -10,7 +10,7 @@ export default async function About() {
   const t = await getScopedI18n("page.about");
 
   return (
-    <div className="flex flex-col items-center justify-cente">
+    <div className="flex flex-col items-center justify-center">
       {/* 타이틀 */}
       <LocaleProvider locale={locale}>
         <PageTitle />

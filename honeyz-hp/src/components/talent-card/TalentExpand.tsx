@@ -10,7 +10,7 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import MotionButton from "@/components/common/MotionButton";
-import { TalentData } from "@/models/TalentData";
+import TalentData from "@/models/TalentData";
 import YouTube from "react-youtube";
 import BgLogo from "/public/img/bg-logo.png";
 

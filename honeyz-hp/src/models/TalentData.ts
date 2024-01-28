@@ -1,4 +1,4 @@
-export const TalentData = [
+const TalentData = [
   {
     id: "honey-churros",
     name: "허니츄러스",
@@ -65,3 +65,5 @@ export const TalentData = [
     vedioLId: "paIBS4bJlgE?si=Qg4pLT2HW0XKU2Jh",
   },
 ];
+
+export default TalentData;

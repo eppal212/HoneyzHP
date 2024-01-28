@@ -7,19 +7,13 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { IconWorld } from "@tabler/icons-react";
 import MotionButton from "@/components/common/MotionButton";
 import Logo from "/public/img/logo.png";
-
-// import localFont from "next/font/local";
-
-// const customFont = localFont({
-//   src: "../../../public/fonts/BMJUA.woff",
-// });
+import MenuData from "@/models/MenuData";
 
 const TopMenu = () => {
   const router = useRouter();
   const pathname = usePathname();
   const changeLocale = useChangeLocale();
   const currentLocale = useCurrentLocale();
-  const menus = ["about", "news", "talents", "guideline"];
 
   const { scrollY } = useScroll();
   const bgOpacity = useTransform(() =>
@@ -52,19 +46,21 @@ const TopMenu = () => {
           className="absolute top-1/2 right-0 w-full h-3/5 rounded-l-xl border-y-2 border-l-2 border-primary bg-white -translate-y-1/2"
           style={{ opacity: bgOpacity }}
         />
-        {menus.map((item, index) => (
+        {MenuData.map((item, index) => (
           <MotionButton
             key={index}
             className={`text-lg font-logo z-30 ${
-              pathname.split("/")[2] === item
+              pathname.split("/")[2] === item.path
                 ? "gradient-text-primary"
                 : "text-black"
             } hover:text-primary`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            onClick={() => router.push(item)}
+            onClick={() =>
+              item.url ? window.open(item.url) : router.push(item.path)
+            }
           >
-            {item.toUpperCase()}
+            {item.name}
           </MotionButton>
         ))}
         <MotionButton
