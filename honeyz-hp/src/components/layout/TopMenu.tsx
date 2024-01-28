@@ -27,7 +27,7 @@ const TopMenu = () => {
   );
 
   return (
-    <div className="fixed top-1.5 flex justify-between w-full z-20">
+    <header className="fixed top-1.5 flex justify-between w-full z-20">
       {/* 홈 버튼 */}
       <div
         className="relative flex items-center px-3 h-[78px]"
@@ -81,7 +81,7 @@ const TopMenu = () => {
           </div>
         </MotionButton>
       </nav>
-    </div>
+    </header>
   );
 };
 

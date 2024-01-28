@@ -42,7 +42,7 @@ export default async function About() {
 
       {/* 내용 */}
       <div className="flex flex-col gap-6">
-        {[...Array(5)].map((_, index) => (
+        {[...Array(4)].map((_, index) => (
           <Paragraph key={index} index={index} />
         ))}
       </div>

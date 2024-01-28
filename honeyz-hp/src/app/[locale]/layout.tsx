@@ -28,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={(inter.className, "relative bg-bg")}>
+        {/* 헤더 */}
         <TopMenu />
         <Image
           className="absolute top-0 left-0 opacity-5 -z-10 pointer-events-none"
@@ -35,13 +36,18 @@ export default function RootLayout({
           alt="bg-logo"
           width={500}
         />
-        <div className="h-auto min-h-screen">{children}</div>
-        <Image
-          className="fixed bottom-0 right-0 opacity-5 -z-10 pointer-events-none"
-          src={BgLogo}
-          alt="bg-logo"
-          width={500}
-        />
+        {/* 본문 */}
+        <div className="h-auto min-h-screen mb-32">{children}</div>
+        {/* 워터마크 */}
+        <div className="sticky bottom-0">
+          <Image
+            className="absolute bottom-10 right-10 opacity-5 -z-10 pointer-events-none"
+            src={BgLogo}
+            alt="bg-logo"
+            width={500}
+          />
+        </div>
+        {/* 푸터 */}
         <LocaleProvider locale={locale}>
           <Footer />
         </LocaleProvider>
