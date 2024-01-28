@@ -4,6 +4,7 @@ import {
   useMotionValue,
   useAnimationFrame,
 } from "framer-motion";
+import { memo } from "react";
 import { twMerge } from "tailwind-merge";
 
 interface props {
@@ -13,11 +14,7 @@ interface props {
 }
 
 // https://codesandbox.io/p/sandbox/framer-motion-scroll-velocity-r1dy4u?file=%2Fsrc%2Fstyles.css%3A149%2C1
-export default function ParallaxText({
-  className,
-  span,
-  baseVelocity = 5,
-}: props) {
+const ParallaxText = ({ className, span, baseVelocity = 5 }: props) => {
   const baseValue = useMotionValue(0);
 
   const wrap = (min: number, max: number, v: number) => {
@@ -45,4 +42,6 @@ export default function ParallaxText({
       </motion.div>
     </div>
   );
-}
+};
+
+export default memo(ParallaxText);

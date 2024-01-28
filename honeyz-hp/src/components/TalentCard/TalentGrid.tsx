@@ -4,7 +4,7 @@ import { memo, useState } from "react";
 import { LocaleProvider } from "@/app/[locale]/LocaleProvider";
 import { useCurrentLocale } from "@/locales/client";
 import { motion } from "framer-motion";
-import { TalentData } from "@/components/TalentCard/TalentData";
+import { TalentData } from "@/models/TalentData";
 import TalentExpand from "@/components/TalentCard/TalentExpand";
 import ParallaxText from "@/components/ParallaxText";
 import MotionAppearView from "@/components/layout/MotionAppearView";

@@ -10,7 +10,7 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import MotionButton from "@/components/common/MotionButton";
-import { TalentData } from "@/components/TalentCard/TalentData";
+import { TalentData } from "@/models/TalentData";
 import YouTube from "react-youtube";
 import BgLogo from "/public/img/bg-logo.png";
 
@@ -72,16 +72,16 @@ const TalentExpand = ({ id, onClose }: props) => {
         <div className="flex justify-between">
           {/* 이름 */}
           <div className="flex flex-col">
-            <span
+            <h1
               className={`text-7xl font-starB drop-shadow-title gradient-text-primary`}
             >
               {data?.name}
-            </span>
-            <span
+            </h1>
+            <h2
               className={`text-4xl font-starB drop-shadow-title gradient-text-primary`}
             >
               {data?.enName}
-            </span>
+            </h2>
           </div>
           <div className="flex gap-5">
             <MotionButton onClick={() => window.open(data?.xLink)}>
