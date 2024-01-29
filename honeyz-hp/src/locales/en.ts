@@ -1,4 +1,9 @@
 export default {
+  "page.home.catchphrase": "하루가 달콤해지는 마법",
+  "page.home.go-to-live": "생방송 보러가기",
+  "page.home.tag":
+    "#프로젝트_아이|#버츄얼_유튜버|#허니즈|#꿀잼|#아이돌|#노래맛집|#많관부",
+
   "page.about.subtitle": "Are you curious about Honeyz?",
   "page.about.honeyz": "Honeyz",
   "page.about.description": ` is a group of six virtual YouTubers belonging to Project[i].\nEach member has unique charms and talents,\nthey gathered to communicate with their fans and share fun moments through various contents.\nHoneyz goal is to laugh together, grow together, and have a happy time. (Maybe)`,

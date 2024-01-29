@@ -2,9 +2,10 @@
 
 import { memo, useState } from "react";
 import { motion, MotionProps } from "framer-motion";
-import { IconBroadcast } from "@tabler/icons-react";
+import { IconAccessPoint } from "@tabler/icons-react";
 import { twMerge } from "tailwind-merge";
 import getColors from "@/hooks/getColors";
+import { useScopedI18n } from "@/locales/client";
 
 interface props extends MotionProps {
   className?: string;
@@ -12,6 +13,7 @@ interface props extends MotionProps {
 
 const GoToLiveButton = ({ className, ...others }: props) => {
   const colors = getColors();
+  const t = useScopedI18n("page.home");
   const [isHover, setHover] = useState(false);
 
   return (
@@ -27,44 +29,44 @@ const GoToLiveButton = ({ className, ...others }: props) => {
       {...others}
     >
       <div className="relative">
-        <p className="text-2xl font-nanumGEB tracking-widest text-primary">
-          하루가 달콤해지는 마법
+        <p className="text-2xl font-starL font-bold tracking-widest text-primary">
+          {t("catchphrase")}
         </p>
         <motion.p
-          className="absolute top-0 h-full overflow-hidden text-2xl font-nanumGEB tracking-widest gradient-text-primary"
+          className="absolute top-0 h-full overflow-hidden text-2xl font-starL font-bold tracking-widest gradient-text-primary"
           initial={{ width: "0%" }}
           animate={{
             width: isHover ? "100%" : 0,
             transition: { duration: 0.3 },
           }}
         >
-          하루가 달콤해지는 마법
+          {t("catchphrase")}
         </motion.p>
       </div>
 
       <div className="flex items-center relative mt-2">
-        <p className="text-6xl font-nanumGEB tracking-widest text-primary">
-          생방송 보러가기
+        <p className="text-6xl font-starB tracking-widest text-primary">
+          {t("go-to-live")}
         </p>
         <motion.p
-          className="absolute top-0 h-full overflow-hidden text-6xl font-nanumGEB tracking-widest gradient-text-primary"
+          className="absolute top-0 h-full overflow-hidden text-6xl font-starB tracking-widest gradient-text-primary"
           initial={{ width: "0%" }}
           animate={{
             width: isHover ? "100%" : 0,
             transition: { duration: 0.3 },
           }}
         >
-          생방송 보러가기
+          {t("go-to-live")}
         </motion.p>
 
         <motion.div
           initial={{ color: colors.primary }}
           animate={{
             color: isHover ? colors.gradient1 : colors.primary,
-            transition: { duration: 0.1, delay: isHover ? 0.3 : 0 },
+            transition: { duration: 0.1, delay: isHover ? 0.25 : 0 },
           }}
         >
-          <IconBroadcast size={48} />
+          <IconAccessPoint size={52} />
         </motion.div>
       </div>
     </motion.div>

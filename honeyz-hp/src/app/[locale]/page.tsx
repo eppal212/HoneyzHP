@@ -4,58 +4,104 @@ import "@/styles/text-gradient-animation.css";
 import { twMerge } from "tailwind-merge";
 import GoToLiveButton from "@/components/pages/home/GoToLiveButton";
 import { LocaleProvider } from "./LocaleProvider";
-import { getCurrentLocale } from "@/locales/server";
+import { getCurrentLocale, getScopedI18n } from "@/locales/server";
 import ParallaxText from "@/components/common/ParallaxText";
+import AppearView from "@/components/layout/AppearView";
 
-export default function Home() {
+export default async function Home() {
   const locale = getCurrentLocale();
+  const t = await getScopedI18n("page.home");
+
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col items-center">
       {/* 상단부 */}
-      <section className="relative flex justify-center my-48">
-        <div className="flex flex-col gap-16 w-1/3">
-          <video
-            className="w-full pointer-events-none rounded-2xl"
-            muted
-            autoPlay
-            loop
+      <section className="flex flex-col items-center my-36">
+        <div className="relative flex justify-center">
+          {/* 비디오 + 버튼 */}
+          <AppearView className="flex flex-col gap-16 w-1/3" type="right">
+            <video
+              className="w-full pointer-events-none rounded-2xl"
+              muted
+              autoPlay
+              loop
+            >
+              <source src="/video/home_video.webm" type="video/webm" />
+            </video>
+            <LocaleProvider locale={locale}>
+              <GoToLiveButton />
+            </LocaleProvider>
+          </AppearView>
+
+          {/* 로고 */}
+          <AppearView
+            className="flex flex-col items-center gap-5 w-[33rem] mt-14 ml-14"
+            type="left"
           >
-            <source src="/video/home_video.webm" type="video/webm" />
-          </video>
-          <LocaleProvider locale={locale}>
-            <GoToLiveButton />
-          </LocaleProvider>
+            <span
+              className={twMerge(
+                "text-8xl font-logo tracking-widest gradient-text-primary",
+                "text-gradient-animation"
+              )}
+            >
+              HONEYZ
+            </span>
+            <Image className="pointer-events-none" src={BgLogo} alt="bg-logo" />
+          </AppearView>
         </div>
 
-        <div className="flex flex-col items-center gap-5 mt-14 ml-14">
-          <span
-            className={twMerge(
-              "text-8xl font-logo tracking-widest gradient-text-primary",
-              "text-gradient-animation"
-            )}
-          >
-            HONEYZ
-          </span>
-          <Image
-            className="pointer-events-none"
-            src={BgLogo}
-            alt="bg-logo"
-            width={500}
-          />
-        </div>
+        {/* 태그 */}
+        <AppearView
+          className={twMerge(
+            "flex justify-between w-[calc(33%+36.5rem)] mt-12 gradient-text-primary",
+            "text-gradient-animation"
+          )}
+          type="up"
+        >
+          {t("tag")
+            .split("|")
+            .map((itme, index) => (
+              <span
+                key={index}
+                className={"text-xl font-nanumGEB text-center tracking-widest "}
+              >
+                {itme}
+              </span>
+            ))}
+        </AppearView>
       </section>
 
       {/* 멤버 섹션 */}
-      <section>
+      <section className="w-full">
+        <div className="w-full bg-primary py-1">
+          <ParallaxText
+            className="w-full bg-bg"
+            span={
+              <span className="break-all text-2xl text-center font-starB text-primary tracking-widest">
+                {"HoneyChurros Ohwayo DamYui AyaUke MangNae DDDDragon "}
+              </span>
+            }
+            baseVelocity={2}
+          />
+        </div>
+
+        <div className="bg-fixed w-full h-[calc(100vh*3/4)] bg-home-talents bg-center bg-cover" />
+
         <ParallaxText
           className="w-full bg-primary"
           span={
             <span className="break-all text-2xl text-center font-starB text-white tracking-widest">
-              {"HoneyChurros Ohwayo DamYui AyaUke MangNae DDDDragon "}
+              {
+                "허니츄러스 오화요 담유이 아야 망내 디디디용 허니츄러스 오화요 담유이 아야 망내 디디디용 "
+              }
             </span>
           }
           baseVelocity={2}
         />
+      </section>
+
+      {/* 노래 섹션 */}
+      <section className="w-full h-screen bg-primary">
+        <p></p>
       </section>
     </div>
   );

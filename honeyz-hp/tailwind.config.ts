@@ -31,6 +31,10 @@ const config: Config = {
           "1px 0 2px white",
           "0 -1px 2px white",
         ],
+        primary: ["-1px 0 0", "0 1px 0", "1px 0 0", "0 -1px 0"],
+      },
+      backgroundImage: {
+        "home-talents": "url('/img/home-talents.png')",
       },
     },
     fontFamily: {

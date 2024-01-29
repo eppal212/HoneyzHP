@@ -21,14 +21,14 @@ const TopMenu = () => {
   );
 
   return (
-    <header className="fixed top-0 flex justify-between w-full z-20 h-20">
+    <header className="fixed top-1.5 flex justify-between w-full z-20 h-20">
       {/* 홈 버튼 */}
       <div
         className="relative flex items-center px-3"
         onClick={() => router.push("/")}
       >
         <motion.div
-          className="absolute top-1/2 -translate-y-1/2 right-0 w-full h-full rounded-r-xl border-y-2 border-r-2 border-primary bg-white"
+          className="absolute top-1/2 -translate-y-1/2 right-0 w-full h-full rounded-r-xl border-y-2 border-r-2 border-primary bg-bg"
           style={{ opacity: bgOpacity }}
         />
         <MotionButton
@@ -43,7 +43,7 @@ const TopMenu = () => {
       {/* 메뉴 목록 */}
       <nav className="relative flex gap-20 pl-24 pr-8">
         <motion.div
-          className="absolute top-1/2 right-0 w-full h-3/5 rounded-l-xl border-y-2 border-l-2 border-primary bg-white -translate-y-1/2"
+          className="absolute top-1/2 right-0 w-full h-3/5 rounded-l-xl border-y-2 border-l-2 border-primary bg-bg -translate-y-1/2"
           style={{ opacity: bgOpacity }}
         />
         {MenuData.map((item, index) => (
