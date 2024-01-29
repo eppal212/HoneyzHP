@@ -5,8 +5,8 @@ import { LocaleProvider } from "@/app/[locale]/LocaleProvider";
 import { useCurrentLocale } from "@/locales/client";
 import { motion } from "framer-motion";
 import TalentData from "@/models/TalentData";
-import TalentExpand from "@/components/talent-card/TalentExpand";
-import ParallaxText from "@/components/ParallaxText";
+import TalentExpand from "@/components/pages/talents/talent-card/TalentExpand";
+import ParallaxText from "@/components/common/ParallaxText";
 import MotionAppearView from "@/components/layout/MotionAppearView";
 
 const TalentGrid = () => {
