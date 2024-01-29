@@ -18,6 +18,16 @@
 }
 
 @font-face {
+  font-family: "NanumGothic";
+  src: url("/fonts/NanumGothic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NanumGothicEB";
+  src: url("/fonts/NanumGothicExtraBold.woff") format("woff");
+}
+
+@font-face {
   font-family: "NanumSquareRoundR";
   src: url("/fonts/NanumSquareRoundR.woff") format("woff");
 }

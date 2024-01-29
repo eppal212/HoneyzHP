@@ -31,6 +31,8 @@ const config: Config = {
       logo: ["LunarModularBold"],
       starB: ["PyeongChangPeaceBold"],
       starL: ["PyeongChangPeaceLight"],
+      nanumG: ["NanumGothic"],
+      nanumGEB: ["NanumGothicEB"],
       nanum: ["NanumSquareR"],
       nanumR: ["NanumSquareRound"],
     },
