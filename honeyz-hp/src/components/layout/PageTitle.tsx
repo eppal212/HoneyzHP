@@ -12,8 +12,6 @@ const PageTitle = () => {
     switch (pageName) {
       case "about":
         return "page.about";
-      case "news":
-        return "page.news";
       case "talents":
         return "page.talents";
       case "guideline":

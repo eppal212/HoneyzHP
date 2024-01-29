@@ -21,10 +21,10 @@ const TopMenu = () => {
   );
 
   return (
-    <header className="fixed top-1.5 flex justify-between w-full z-20">
+    <header className="fixed top-0 flex justify-between w-full z-20 h-20">
       {/* 홈 버튼 */}
       <div
-        className="relative flex items-center px-3 h-[78px]"
+        className="relative flex items-center px-3"
         onClick={() => router.push("/")}
       >
         <motion.div

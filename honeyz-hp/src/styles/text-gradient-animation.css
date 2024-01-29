@@ -1,0 +1,13 @@
+.text-gradient-animation {
+  background-size: 200% auto;
+  animation: textShine 2s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
