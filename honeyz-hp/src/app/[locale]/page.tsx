@@ -5,13 +5,29 @@ import { twMerge } from "tailwind-merge";
 import GoToLiveButton from "@/components/pages/home/GoToLiveButton";
 import { LocaleProvider } from "./LocaleProvider";
 import { getCurrentLocale } from "@/locales/server";
+import ParallaxText from "@/components/common/ParallaxText";
 
 export default function Home() {
   const locale = getCurrentLocale();
   return (
-    <>
-      <div className="relative mt-48">
-        <div className="absolute top-14 right-1/2 translate-x-full pl-20 flex flex-col items-center gap-5">
+    <div className="flex flex-col">
+      {/* 상단부 */}
+      <section className="relative flex justify-center my-48">
+        <div className="flex flex-col gap-16 w-1/3">
+          <video
+            className="w-full pointer-events-none rounded-2xl"
+            muted
+            autoPlay
+            loop
+          >
+            <source src="/video/home_video.webm" type="video/webm" />
+          </video>
+          <LocaleProvider locale={locale}>
+            <GoToLiveButton />
+          </LocaleProvider>
+        </div>
+
+        <div className="flex flex-col items-center gap-5 mt-14 ml-14">
           <span
             className={twMerge(
               "text-8xl font-logo tracking-widest gradient-text-primary",
@@ -27,21 +43,20 @@ export default function Home() {
             width={500}
           />
         </div>
+      </section>
 
-        <div className="absolute top-0 left-1/2 w-1/3 -translate-x-full flex flex-col gap-16">
-          <video
-            className="w-full pointer-events-none rounded-2xl"
-            muted
-            autoPlay
-            loop
-          >
-            <source src="/video/home_video.webm" type="video/webm" />
-          </video>
-          <LocaleProvider locale={locale}>
-            <GoToLiveButton />
-          </LocaleProvider>
-        </div>
-      </div>
-    </>
+      {/* 멤버 섹션 */}
+      <section>
+        <ParallaxText
+          className="w-full bg-primary"
+          span={
+            <span className="break-all text-2xl text-center font-starB text-white tracking-widest">
+              {"HoneyChurros Ohwayo DamYui AyaUke MangNae DDDDragon "}
+            </span>
+          }
+          baseVelocity={2}
+        />
+      </section>
+    </div>
   );
 }
