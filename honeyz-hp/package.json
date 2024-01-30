@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tabler/icons-react": "^2.46.0",
+    "axios": "^1.6.7",
     "framer-motion": "^10.18.0",
     "localtunnel": "^2.0.2",
     "next": "14.1.0",

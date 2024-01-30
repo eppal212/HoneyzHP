@@ -1,3 +1,5 @@
+"use client";
+
 import { memo } from "react";
 import MotionAppearView from "@/components/layout/MotionAppearView";
 

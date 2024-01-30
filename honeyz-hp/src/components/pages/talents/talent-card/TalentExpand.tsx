@@ -13,9 +13,10 @@ import MotionButton from "@/components/common/MotionButton";
 import TalentData from "@/models/TalentData";
 import YouTube from "react-youtube";
 import BgLogo from "/public/img/bg-logo.png";
+import { Talent } from "@/models/types";
 
 interface props {
-  id: string;
+  id: Talent;
   onClose: () => void;
 }
 
@@ -35,8 +36,6 @@ const TalentExpand = ({ id, onClose }: props) => {
         return "page.talents.mang-nae";
       case "ddddragon":
         return "page.talents.ddddragon";
-      default:
-        return "page";
     }
   };
   const t = useScopedI18n(getKey());
