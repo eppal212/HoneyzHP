@@ -75,7 +75,7 @@ export default async function Home() {
       <section className="w-full">
         <div className="w-full bg-primary py-1">
           <ParallaxText
-            className="w-full bg-bg"
+            className="w-full bg-pastel"
             span={
               <span className="break-all text-2xl text-center font-starB text-primary tracking-widest">
                 {"HoneyChurros Ohwayo DamYui AyaUke MangNae DDDDragon "}

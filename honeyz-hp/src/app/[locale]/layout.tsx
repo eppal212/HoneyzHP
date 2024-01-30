@@ -27,7 +27,7 @@ export default function RootLayout({
 
   return (
     <html lang="ko">
-      <body className={(inter.className, "bg-bg")}>
+      <body className={(inter.className, "bg-pastel")}>
         {/* 헤더 */}
         <Image
           className="absolute top-0 left-0 opacity-5 -z-10 pointer-events-none"

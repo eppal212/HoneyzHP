@@ -3,11 +3,11 @@ import defaultColors from "tailwindcss/colors";
 
 const colors = {
   primary: "#ff5e88",
-  text: "#501E2B",
-  bg: "#ffeaef",
+  secondary: "#feb580",
+  pastel: "#ffeaef",
+  dark: "#501E2B",
   gradient0: "#fb78ae",
   gradient1: "#ff807e",
-  gradient2: "#feb580",
   projecti: "#00c7fe",
 } as const;
 

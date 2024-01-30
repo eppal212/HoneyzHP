@@ -19,10 +19,10 @@ const Paragraph = async ({ index }: { index: number }) => {
   };
   return (
     <AppearView className="flex flex-col gap-3" type="up">
-      <h2 className="text-3xl font-nanum font-bold text-text">
+      <h2 className="text-3xl font-nanum font-bold text-dark">
         {getText()?.title}
       </h2>
-      <p className="text-xl leading-[1.5] whitespace-pre-wrap font-nanum text-text">
+      <p className="text-xl leading-[1.5] whitespace-pre-wrap font-nanum text-dark">
         {getText()?.desc}
       </p>
     </AppearView>
@@ -40,10 +40,10 @@ export default async function About() {
       </LocaleProvider>
 
       <AppearView className="flex flex-col mt-20 gap-5" type="up">
-        <h1 className="text-4xl font-nanum font-bold text-text text-center">
+        <h1 className="text-4xl font-nanum font-bold text-dark text-center">
           {t("header.title")}
         </h1>
-        <p className="text-xl font-nanum text-text text-center">
+        <p className="text-xl font-nanum text-dark text-center">
           {t("header.desc")}
         </p>
       </AppearView>
@@ -55,7 +55,7 @@ export default async function About() {
         ))}
       </div>
       <AppearView type="up">
-        <p className="text-xl leading-[1.5] whitespace-pre-wrap font-nanum text-text text-center mt-24">
+        <p className="text-xl leading-[1.5] whitespace-pre-wrap font-nanum text-dark text-center mt-24">
           {t("footer")}
         </p>
       </AppearView>

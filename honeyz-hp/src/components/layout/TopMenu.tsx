@@ -40,7 +40,7 @@ const TopMenu = () => {
       }}
     >
       {/* <motion.div
-        className="absolute top-0 w-full h-full bg-gradient-to-b from-bg"
+        className="absolute top-0 w-full h-full bg-gradient-to-b from-pastel"
         style={{ opacity: bgOpacity }}
       /> */}
       {/* 홈 버튼 */}
@@ -65,7 +65,7 @@ const TopMenu = () => {
             className={`text-lg font-logo z-30 ${
               pathname.split("/")[2] === item.path
                 ? "gradient-text-primary"
-                : "text-text"
+                : "text-dark"
             } hover:text-primary`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}

@@ -43,7 +43,7 @@ const TalentExpand = ({ id, onClose }: props) => {
 
   return (
     <div
-      className="fixed inset-0 w-screen h-screen z-40 flex justify-center items-center bg-black bg-opacity-20"
+      className="fixed inset-0 w-screen h-screen z-40 flex justify-center items-center bg-dark bg-opacity-20"
       onClick={() => onClose()}
     >
       <motion.img
@@ -55,7 +55,7 @@ const TalentExpand = ({ id, onClose }: props) => {
 
       <motion.div
         key={id}
-        className="relative flex flex-col w-[800px] h-[800px] bg-bg rounded-3xl p-10"
+        className="relative flex flex-col w-[800px] h-[800px] bg-pastel rounded-3xl p-10"
         initial={{ opacity: 0, transform: "translateX(-10px)" }}
         animate={{
           opacity: 1,
@@ -97,13 +97,13 @@ const TalentExpand = ({ id, onClose }: props) => {
         </div>
 
         {/* 글씨들 */}
-        <p className="text-xl whitespace-pre-wrap font-bold font-nanumR text-text mt-8">
+        <p className="text-xl whitespace-pre-wrap font-bold font-nanumR text-dark mt-8">
           {t("detail")}
         </p>
-        <p className="text-xl whitespace-pre-wrap font-bold font-nanumR text-text mt-8">
+        <p className="text-xl whitespace-pre-wrap font-bold font-nanumR text-dark mt-8">
           {t("hello")}
         </p>
-        <p className="text-xl whitespace-pre-wrap font-bold font-nanumR text-text mt-12">
+        <p className="text-xl whitespace-pre-wrap font-bold font-nanumR text-dark mt-12">
           {t("introduce")}
         </p>
 

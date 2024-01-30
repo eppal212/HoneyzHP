@@ -20,7 +20,7 @@ const Footer = () => {
     <footer className="relative flex flex-col items-center justify-center w-full h-48 gap-5 bg-gradient-to-r from-gradient1 via-gradient0 to-gradient1">
       {/* 맨 위로 버튼 */}
       <MotionButton
-        className="absolute -top-[22px] right-20 rounded-full bg-bg"
+        className="absolute -top-[22px] right-20 rounded-full bg-pastel"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
         <IconCircleArrowUp className="text-gradient1" size={buttonSize} />
