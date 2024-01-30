@@ -50,23 +50,24 @@ export default async function Home() {
         </div>
 
         {/* 태그 */}
-        <AppearView
-          className={twMerge(
-            "flex justify-between w-[calc(33%+36.5rem)] mt-12 gradient-text-primary",
-            "text-gradient-animation"
-          )}
-          type="up"
-        >
-          {t("tag")
-            .split("|")
-            .map((itme, index) => (
-              <span
-                key={index}
-                className={"text-xl font-nanumGEB text-center tracking-widest "}
-              >
-                {itme}
-              </span>
-            ))}
+        <AppearView className="w-[calc(33%+36.5rem)] mt-12" type="up">
+          <div
+            className={twMerge(
+              "flex justify-between w-full gradient-text-primary",
+              "text-gradient-animation"
+            )}
+          >
+            {t("tag")
+              .split("|")
+              .map((itme, index) => (
+                <span
+                  key={index}
+                  className="text-xl font-nanumGEB text-center tracking-widest "
+                >
+                  {itme}
+                </span>
+              ))}
+          </div>
         </AppearView>
       </section>
 
