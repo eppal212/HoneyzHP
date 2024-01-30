@@ -15,6 +15,7 @@ interface props {
   baseVelocity?: number;
 }
 
+// TODO: 개선
 // https://codesandbox.io/p/sandbox/framer-motion-scroll-velocity-r1dy4u?file=%2Fsrc%2Fstyles.css%3A149%2C1
 const ParallaxText = ({ className, span, baseVelocity = 5 }: props) => {
   const baseValue = useMotionValue(0);
@@ -37,10 +38,7 @@ const ParallaxText = ({ className, span, baseVelocity = 5 }: props) => {
         className="flex flex-nowrap whitespace-pre"
         style={{ x: transform }}
       >
-        {span}
-        {span}
-        {span}
-        {span}
+        {[...Array(4)].map(() => span)}
       </motion.div>
     </div>
   );

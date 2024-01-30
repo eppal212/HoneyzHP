@@ -3,6 +3,9 @@ export default {
   "page.home.go-to-live": "생방송 보러가기~",
   "page.home.tag":
     "#프로젝트_아이|#버츄얼_유튜버|#허니즈|#꿀잼|#아이돌|#노래맛집|#많관부",
+  "page.home.videos": "최근 영상 다시보기",
+  "page.home.videos.catchphrase": "[ 달콤했던 어제의 추억 ]",
+  "page.home.videos.more": "더 보기",
 
   "page.about.subtitle": "허니즈가 궁금해?",
   "page.about.honeyz": "허니즈(Honeyz)",

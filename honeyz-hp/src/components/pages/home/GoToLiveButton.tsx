@@ -29,11 +29,11 @@ const GoToLiveButton = ({ className, ...others }: props) => {
       {...others}
     >
       <div className="relative">
-        <p className="text-2xl font-starL font-bold tracking-widest text-primary">
+        <span className="text-2xl font-starL font-bold tracking-widest text-primary">
           {t("catchphrase")}
-        </p>
-        <motion.p
-          className="absolute top-0 h-full overflow-hidden text-2xl font-starL font-bold tracking-widest gradient-text-primary"
+        </span>
+        <motion.span
+          className="absolute top-0 left-0 h-full overflow-hidden text-2xl font-starL font-bold tracking-widest gradient-text-primary"
           initial={{ width: "0%" }}
           animate={{
             width: isHover ? "100%" : 0,
@@ -41,15 +41,15 @@ const GoToLiveButton = ({ className, ...others }: props) => {
           }}
         >
           {t("catchphrase")}
-        </motion.p>
+        </motion.span>
       </div>
 
       <div className="flex items-center relative mt-2">
-        <p className="text-6xl font-starB tracking-widest text-primary">
+        <span className="text-6xl font-starB tracking-widest text-primary">
           {t("go-to-live")}
-        </p>
-        <motion.p
-          className="absolute top-0 h-full overflow-hidden text-6xl font-starB tracking-widest gradient-text-primary"
+        </span>
+        <motion.span
+          className="absolute top-0 left-0 h-full overflow-hidden text-6xl font-starB tracking-widest gradient-text-primary"
           initial={{ width: "0%" }}
           animate={{
             width: isHover ? "100%" : 0,
@@ -57,7 +57,7 @@ const GoToLiveButton = ({ className, ...others }: props) => {
           }}
         >
           {t("go-to-live")}
-        </motion.p>
+        </motion.span>
 
         <motion.div
           initial={{ color: colors.primary }}

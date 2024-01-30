@@ -1,3 +1,5 @@
+"use client";
+
 import { memo } from "react";
 import { motion, MotionProps } from "framer-motion";
 
@@ -24,9 +26,9 @@ const MotionAppearView = ({
       case "down":
         return "translateY(-10px)";
       case "left":
-        return "translateX(-10px)";
-      case "right":
         return "translateX(10px)";
+      case "right":
+        return "translateX(-10px)";
     }
   };
 
