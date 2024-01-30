@@ -47,13 +47,13 @@ const TalentGrid = () => {
                   animate={{ opacity: 1, transition: { delay: 0.3 } }}
                 >
                   <span
-                    className={`text-4xl font-starB drop-shadow-talentName`}
+                    className={`text-4xl font-starB drop-shadow-talent-name`}
                     style={{ color: data.personalColor }}
                   >
                     {data.name}
                   </span>
                   <span
-                    className={`text-xl font-starB drop-shadow-talentName`}
+                    className={`text-xl font-starB drop-shadow-talent-name`}
                     style={{ color: data.personalColor }}
                   >
                     {data.enName}

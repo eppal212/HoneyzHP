@@ -3,7 +3,7 @@ import defaultColors from "tailwindcss/colors";
 
 const colors = {
   primary: "#ff5e88",
-  text: "#2e050c",
+  text: "#501E2B",
   bg: "#ffeaef",
   gradient0: "#fb78ae",
   gradient1: "#ff807e",
@@ -23,16 +23,22 @@ const config: Config = {
   theme: {
     extend: {
       colors,
-      dropShadow: {
-        title: "5px 5px #ff5e8833",
-        talentName: [
+
+      dropShadow: ({ theme }) => ({
+        title: "5px 5px theme(colors.primary)33",
+        "talent-name": [
           "-1px 0 2px white",
           "0 1px 2px white",
           "1px 0 2px white",
           "0 -1px 2px white",
         ],
-        primary: ["-1px 0 0", "0 1px 0", "1px 0 0", "0 -1px 0"],
-      },
+        "top-menu": [
+          "-1px 0 2px theme(colors.bg)bf",
+          "0 1px 2px theme(colors.bg)bf",
+          "1px 0 2px theme(colors.bg)bf",
+          "0 -1px 2px theme(colors.bg)bf",
+        ],
+      }),
       backgroundImage: {
         "home-talents": "url('/img/home-talents.png')",
       },
